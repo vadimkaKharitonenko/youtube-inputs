@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inputs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="field">
+        <input class="field__input" value="Text" type="text">
+      </div>
+      <div class="field field_error">
+        <div class="field__left-icon">
+          <img src="./assets/icons/Left.svg" alt="Icon">
+        </div>
+        <input class="field__input" value="Text" type="text">
+      </div>
+      <div class="field field_disabled icon_right">
+        <input class="field__input" disabled value="Text" type="text">
+        <div class="field__right-icon">
+          <img src="./assets/icons/Left.svg" alt="Icon">
+        </div>
+      </div>
+      <div class="field field_success">
+        <div class="field__left-icon">
+          <img src="./assets/icons/Currency.svg" alt="Icon">
+        </div>
+        <input class="field__input" value="0.00" type="text">
+      </div>
+      <div class="field icon_right">
+        <input class="field__input" value="0.00" type="text">
+        <div class="field__right-icon">
+          <img src="./assets/icons/Percent.svg" alt="Icon">
+        </div>
+      </div>
+      <div class="field type_color">
+        <input class="field__color js-field-color-picker" hidden type="color">
+        <div class="field__color-mark js-field-color-mark"></div>
+        <span class="field__color-prefix">#</span>
+        <input class="field__input" value="" type="text">
+      </div>
+      <div class="field icon_right icon_clickable">
+        <input class="field__input" value="Text" type="text">
+        <div class="field__right-icon js-input-clear">
+          <img src="./assets/icons/Clear.svg" alt="Icon">
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

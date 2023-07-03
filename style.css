@@ -1,0 +1,121 @@
+:root {
+  --gray-50: #F7FAFC;
+  --gray-100: #E3E8EE;
+  --gray-200: #C1C9D2;
+  --gray-500: #697386;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.field {
+  position: relative;
+}
+
+.field__left-icon,
+.field__right-icon,
+.field__color-mark {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+
+.field__right-icon {
+  left: unset;
+  right: 8px;
+}
+
+.field__input {
+  max-width: 250px;
+  width: 100%;
+  padding: 8px;
+  color: var(--gray-500);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border: 1px solid var(--gray-100);
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px rgba(55, 65, 81, 0.08);
+  transition: .3s ease-in-out;
+}
+
+.field__input:hover {
+  border-color: var(--gray-500);
+}
+
+.field__input:focus {
+  box-shadow: 0px 0px 0px 1px #6C8EEF inset, 0px 0px 0px 2px #D6ECFF;
+  border-color: var(--gray-100);
+}
+
+.field.field_error .field__input {
+  box-shadow: 0px 0px 0px 1px #CD3D64 inset, 0px 0px 0px 2px #FDE2DD;
+  border-color: var(--gray-100);
+}
+
+.field.field_success .field__input {
+  box-shadow: 0px 0px 0px 1px #09825D inset, 0px 0px 0px 2px #CBF4C9;
+  border-color: var(--gray-100);
+}
+
+.field.field_disabled .field__input {
+  box-shadow: 0px 1px 2px 0px rgba(55, 65, 81, 0.08);
+  border-color: var(--gray-100);
+  background-color: var(--gray-50);
+  cursor: not-allowed;
+}
+
+.field__left-icon + .field__input {
+  padding-left: 24px;
+}
+
+.field.type_color .field__input {
+  padding-left: 39px;
+}
+
+.field__color-prefix {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  transform: translateY(-50%);
+  color: var(--gray-500);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.field.icon_right .field__input {
+  padding-right: 24px;
+}
+
+.field__color-mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background: var(--gray-200);
+  cursor: pointer;
+}
+
+.icon_clickable .field__left-icon,
+.icon_clickable .field__right-icon {
+  cursor: pointer;
+}
+
